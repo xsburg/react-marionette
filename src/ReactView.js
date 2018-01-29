@@ -22,8 +22,6 @@ export default Marionette.ItemView.extend({
             ReactBehavior: {
                 behaviorClass: ReactBehavior,
                 containerEl: null,
-                reducer: this.options.reducer,
-                store: this.options.store,
                 render: this.options.render
             }
         };

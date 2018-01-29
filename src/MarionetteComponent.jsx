@@ -11,8 +11,17 @@
 
 import Marionette from 'backbone.marionette';
 import React from 'react';
+import PropTypes from 'prop-types';
 
-export default class MarionetteComponent extends React.Component {
+class MarionetteComponent extends React.Component {
+    constructor(props) {
+        super(props);
+        this._el = null;
+        this._view = null;
+        this._hostRegion = null;
+        this._regionManager = null;
+    }
+
     componentDidMount() {
         this._regionManager = new Marionette.RegionManager();
         this._hostRegion = this._regionManager.addRegion('hostRegion', {
@@ -39,11 +48,6 @@ export default class MarionetteComponent extends React.Component {
         return this._hostRegion;
     }
 
-    _el = null;
-    _view = null;
-    _hostRegion = null;
-    _regionManager = null;
-
     _rebuildView(props) {
         if (!props.view) {
             return;
@@ -55,6 +59,15 @@ export default class MarionetteComponent extends React.Component {
     }
 
     render() {
-        return <div ref={el => (this._el = el)} style={{ height: '100%', width: '100%' }} />;
+        return <div className={this.props.className} ref={el => (this._el = el)} />;
     }
 }
+
+MarionetteComponent.propTypes = {
+    view: PropTypes.func.isRequired,
+    viewOptions: PropTypes.object,
+    onUpdateOptions: PropTypes.func,
+    className: PropTypes.string
+};
+
+export default MarionetteComponent;

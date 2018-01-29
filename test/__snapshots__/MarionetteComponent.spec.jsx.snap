@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MarionetteComponent should render simple marionette view 1`] = `
+<div
+  className="react-block"
+>
+  <MarionetteComponent
+    className="marionette-wrapper"
+    view={[Function]}
+    viewOptions={
+      Object {
+        "name": "Marionette",
+      }
+    }
+  >
+    <div
+      className="marionette-wrapper"
+    />
+  </MarionetteComponent>
+</div>
+`;
+
+exports[`MarionetteComponent should render simple marionette view 2`] = `"<div class=\\"sample-view\\">Hello, Marionette</div>"`;
