@@ -1,5 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`MarionetteComponent should not update view when options change (w/o update checkers) 1`] = `"<div class=\\"sample-view\\">Hello, Marionette</div>"`;
+
 exports[`MarionetteComponent should render simple marionette view 1`] = `
 <div
   className="react-block"
@@ -21,3 +23,9 @@ exports[`MarionetteComponent should render simple marionette view 1`] = `
 `;
 
 exports[`MarionetteComponent should render simple marionette view 2`] = `"<div class=\\"sample-view\\">Hello, Marionette</div>"`;
+
+exports[`MarionetteComponent should update view when options change (w/ onUpdateOptions) 1`] = `"<div class=\\"sample-view\\">Hello, Billy</div>"`;
+
+exports[`MarionetteComponent should update view when options change (w/ shouldViewRebuild that does the update itself) 1`] = `"<div class=\\"sample-view\\">Hello, Billy</div>"`;
+
+exports[`MarionetteComponent should update view when options change (w/ shouldViewRebuild that returns true) 1`] = `"<div class=\\"sample-view\\">Hello, Billy</div>"`;

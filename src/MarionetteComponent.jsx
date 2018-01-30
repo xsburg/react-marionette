@@ -27,17 +27,24 @@ class MarionetteComponent extends React.Component {
         this._hostRegion = this._regionManager.addRegion('hostRegion', {
             el: this._el
         });
-        this._rebuildView(this.props);
+        this._rebuildView();
     }
 
-    shouldComponentUpdate(nextProps) {
-        if (nextProps.onUpdateOptions) {
-            nextProps.onUpdateOptions(this._view);
+    componentWillReceiveProps(nextProps) {
+        if (this.props.view !== nextProps.view) {
+            throw new Error(
+                '[MarionetteComponent] error: `props.view` cannot be changed after the initial render.'
+            );
         }
-        if (this._view.shouldViewRebuild && this._view.shouldViewRebuild(nextProps.viewOptions)) {
-            this._rebuildView(nextProps);
+    }
+
+    componentDidUpdate(prevProps) {
+        if (this.props.onUpdateOptions) {
+            this.props.onUpdateOptions(this._view, prevProps.viewOptions, this.props.viewOptions);
         }
-        return false;
+        if (this._view.shouldViewRebuild && this._view.shouldViewRebuild(this.props.viewOptions)) {
+            this._rebuildView();
+        }
     }
 
     componentWillUnmount() {
@@ -48,13 +55,13 @@ class MarionetteComponent extends React.Component {
         return this._hostRegion;
     }
 
-    _rebuildView(props) {
-        if (!props.view) {
+    _rebuildView() {
+        if (!this.props.view) {
             return;
         }
 
-        const View = props.view; // tslint:disable-line
-        this._view = new View(props.viewOptions);
+        const View = this.props.view;
+        this._view = new View(this.props.viewOptions);
         this._hostRegion.show(this._view);
     }
 

@@ -7,7 +7,7 @@ type MarionetteViewClass = any;
 interface OwnProps {
     view: MarionetteViewClass;
     viewOptions: any;
-    onUpdateOptions?: (view: MarionetteView) => boolean;
+    onUpdateOptions?: (view: MarionetteView, viewOptions: any, nextViewOptions: any) => boolean;
     className?: string;
 }
 
