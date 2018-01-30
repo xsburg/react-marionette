@@ -1,6 +1,7 @@
 {
   "presets": [
-    ["es2015", { "modules": false }]
+    ["es2015", { "modules": false }],
+    "react"
   ],
   "env": {
     "rollup": {
@@ -10,8 +11,7 @@
     },
     "test": {
       "presets": [
-        ["es2015", { "modules": "commonjs" }],
-        "react"
+        ["es2015", { "modules": "commonjs" }]
       ]
     }
   }
