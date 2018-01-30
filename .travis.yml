@@ -1,21 +1,21 @@
 language: node_js
 node_js:
-  - '8'
+- '8'
 cache:
   yarn: true
   directories:
-    - node_modules
+  - node_modules
 script:
-  - npm run test:coverage
-  - npm run compile
+- npm run test:coverage
+- npm run compile
 after_script:
-  - node ./node_modules/coveralls/bin/coveralls.js -v < ./coverage/lcov.info
+- node ./node_modules/coveralls/bin/coveralls.js -v < ./coverage/lcov.info
 deploy:
   - provider: npm
     skip_cleanup: true
     email: me@sburg.net
     api_key:
-      secure: KG7kSrepTW01vh9ghvn0NrYk2iluAKqcX8cU/F2gQ+O2Qx+/7P/D1hoKdGGgBjMrG94fUQ7dhwyB3doNk1wQKUBX4XB/solmHGlI6fcz+nxXR6Aw6VFzfYL+iDE7+haa5JzlB97vn/5ayB2GxQYqhjqNC2Hrb/Tyk6XPa3iM3TPD0aisLjFuwzDUZL0DfTj3rVPONaHxD2YgebBsBr8jVq9Q+wKgzAxxD888oFt+4gNflTe1dz/6dujKbNoWO836neZwk4xZ30A0lrrbwXyNNLXgOwqhNNfJE0QCl5gI4cDS1x6RDkMobZw5133RUN7asH2hPHSc7HLe1P3J6noINgZ/xJ1CdVR1j7+q9YBJjalA2NKWUq5Xrn3ZIRKxFAOJxUn3IwD7EWMZHSvo553CztZJR4B+tA4r+DFgn/XAwWrXf5eIT51B+mMqpwouktmcbMj3ahF2sIe0iw28n+CCNuuGUbgVblZSdnyGj2SSH7RAL7g03uZWORP2IDiUFDSa7ggXpjuUqEUC2ua5/kee47cVpBbSdF4IXbAsSt6WsjMwPnI/ilKVloqRFk/vrakdVP4OhTxioQteomkW+edFm71crKFqtmwtw+f+a5Vs3nIrRufaOzvKJUiz3we+KX1Tbjwy8ksDHI2IBbJAo/MZoZ5ljcuD4eLmCCUh1OA/2Ro=
+      secure: f8/n83wquTeDai4GljMLwozKsWJZ3PPTy0vLe4F4rOtQ8SOcar+R6PGd4ftgDFXybvfbLHa0FtmMoR4ZJhEPOZf9d6I22oxvOvvn6vYGn8VszX/fCqIH72hRSHmHGD5x8cMcjfzmzFt5wLmdwj8MKRyOk/C6a3FblB5HYvZep8n0hFuuKslwn3dKV4Q5FENoz+cspEwczt6chVwNok4BGDAtu8yr67hxtDyTkb4nnuMIkfj0tmWXww/zAFQuND2QthdRxER1ZjFYBhbrkZraFMMwPvCUZL3lNMrNrTIyuRk7r8IAxaOMsuPhugZ8mPtWQCG+DDDL/6qvCPG+IkRDOGRbvFi6krp+P1FNiVNBbADdRp5YYQGv9rJtE6uXK94rmWmK2iPwOXCqhno1C8ltClsjF8Q+OxRaVywTLr1tha2+vbzVMjrX0iZnllJex/kAfH/rWZKPoOnnJJEFzmLyHIHU3k5AzBK5gpzCO4Ds7d+W+zVBEZcsNPbf7fq/jIKl5dx3dx+bIu5pQbGxWk2a2zWPJ3Mwuy68+SNpCXJH/vXQ5tY2fRBUpjWEh5YGwyDCwj6aJbYsdJuXYLwS6uBY4yD4DMswCK2DBKUT9uei+ABdVk/b3mJfmpr9sP1wsGpN3mcfiWm1OHqC19N4xst7tspBJcXM34wVnlUsJBtGShU=
     on:
       tags: true
       branch: master
