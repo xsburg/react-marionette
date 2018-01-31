@@ -9,7 +9,7 @@ The library provides a bi-directional gateway between the two technologies:
 
 ## Installation
 
-The velocity-react library is provided as an NPM package:
+The react-marionette library is provided as an NPM package:
 
 ```
 $ npm install --save react-marionette
