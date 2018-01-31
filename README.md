@@ -9,7 +9,7 @@ The library provides a bi-directional gateway between the two technologies:
 
 ## Installation
 
-The react-marionette library is provided as an NPM package:
+The react-marionette library is provided as an [NPM package](https://www.npmjs.com/package/react-marionette):
 
 ```
 $ npm install --save react-marionette
