@@ -34,7 +34,7 @@ Result:
 */
 ```
 
-The simplest way to render React inside of your Marionette layout. Inside, creates a new mount point using `ReactDOM.render` and unmounts on view destroy.
+The simplest way to render React components in your Marionette layout. Inside, creates a new mount point using `ReactDOM.render` and unmounts on view destroy.
 
 `render` - a function that returns a React node.
 
