@@ -40,7 +40,7 @@ The simplest way to render React components in your Marionette layout. Inside, c
 
 `mountPoint` - `'onRender'` or `'onShow'`, defines the point at which the render of the React node occurs. Default: `'onShow'`.
 
-A more complicated example using Redux for state management and rendering a connected module component:
+A more complicated example using Redux for state management and rendering a connected component:
 
 ```javascript
 const view = new ReactView({
@@ -48,7 +48,7 @@ const view = new ReactView({
     render: () => {
         return (
             <Provider store={store}>
-                <SomeConnectedPageComponent />
+                <SomeConnectedComponent />
             </Provider>
         );
     }
@@ -164,7 +164,7 @@ const SimpleView = Marionette.ItemView.extend({
     },
     className: 'sample-view',
     shouldViewRebuild(nextOptions) {
-        // Optionally, just implement the update logic here and return false
+        // Or just implement the update logic here and return false
         return true;
     }
 });
