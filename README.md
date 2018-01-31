@@ -2,7 +2,7 @@
 
 Connects your [Marionette](https://marionettejs.com/) views and [React](https://reactjs.org/) components.
 
-The library provides a bi-directional gateway between the two technologies:
+The library provides a bidirectional gateway between the two technologies:
 
 1. `ReactView` and `ReactBehavior` - renders React components inside your Marionette views.
 2. `MarionetteComponent` - renders Marionette views inside your React components.
