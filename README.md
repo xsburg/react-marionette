@@ -131,6 +131,8 @@ Result:
 */
 ```
 
+[![Edit 5v34zm4qn4](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/5v34zm4qn4)
+
 A reverse gateway allowing to render a Marionette view inside your React code. Once rendered, the marionette view is not updated on `viewOptions` change unless it is defined in `onUpdateOptions`.
 
 `view` - a Marionette.View class to be rendered.
