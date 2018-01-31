@@ -23,6 +23,7 @@ export class ReactView {
         className?: string;
         el?: any;
         tagName?: string;
-        render: () => React.ReactNode
+        render: () => React.ReactNode,
+        mountPoint: 'onShow'|'onRender'
     });
 }

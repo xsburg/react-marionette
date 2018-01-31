@@ -15,26 +15,38 @@ import ReactDOM from 'react-dom';
 
 export default Marionette.Behavior.extend({
     initialize(options) {
-        if (!options.containerEl) {
-            throw new Error('Missing options: containerEl');
-        }
-        if (!options.containerEl) {
+        if (!options.render) {
             throw new Error('Missing options: render');
         }
     },
 
+    onRender() {
+        if (this.options.mountPoint === 'onRender') {
+            this._mountReactComponent();
+        }
+    },
+
     onShow() {
-        ReactDOM.render(
-            this.options.render(),
-            this.__getContainerEl()
-        );
+        if (this.options.mountPoint !== 'onRender') {
+            this._mountReactComponent();
+        }
     },
 
     onDestroy() {
-        ReactDOM.unmountComponentAtNode(this.__getContainerEl());
+        if (this._mounted) {
+            ReactDOM.unmountComponentAtNode(this._getContainerEl());
+        }
     },
 
-    __getContainerEl() {
+    _mountReactComponent() {
+        ReactDOM.render(
+            this.options.render(),
+            this._getContainerEl()
+        );
+        this._mounted = true;
+    },
+
+    _getContainerEl() {
         if (this.options.containerEl) {
             return this.$(this.options.containerEl)[0];
         }

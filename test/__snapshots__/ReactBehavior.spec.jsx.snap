@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReactBehavior should render react component under the container element 1`] = `"<div class=\\"marionette-root\\"><div class=\\"container-el\\"><div class=\\"react-component\\">Hello, React!</div></div></div>"`;
+
+exports[`ReactBehavior should render react component under the root element 1`] = `"<div class=\\"marionette-root\\"><div class=\\"react-component\\">Hello, React!</div></div>"`;

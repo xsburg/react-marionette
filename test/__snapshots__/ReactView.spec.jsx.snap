@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReactView should render react component 1`] = `"<div class=\\"react-wrapper\\"><div class=\\"react-component\\">Hello, React</div></div>"`;
+
+exports[`ReactView should render react component on render 1`] = `"<div class=\\"react-wrapper\\"><div class=\\"react-component\\">Hello, React</div></div>"`;
