@@ -33,6 +33,7 @@ Result:
 </div>
 */
 ```
+[![Edit y3l43yko6z](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/y3l43yko6z)
 
 The simplest way to render React components in your Marionette layout. Inside, creates a new mount point using `ReactDOM.render` and unmounts on view destroy.
 
