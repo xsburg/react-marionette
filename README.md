@@ -84,6 +84,7 @@ Result:
 </div>
 */
 ```
+[![Edit 5x89o51wr4](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/5x89o51wr4)
 
 This behavior gives you more flexibility when rendering a React node by providing the `containerEl` option. Apart from this, the underlying render logic is the same as in `ReactView`.
 
